@@ -1,0 +1,13 @@
+{
+	"name": "stremio-addon-Titlovicom",
+	"version": "0.0.1",
+	"description": "Subtitle provider for Titlovi.com",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"got": "^11.8.0",
+		"jszip": "^3.5.0",
+		"stremio-addon-sdk": "1.1.x"
+	}
+}
