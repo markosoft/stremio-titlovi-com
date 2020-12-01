@@ -1,9 +1,20 @@
 {
-	"name": "stremio-addon-Titlovicom",
-	"version": "0.0.1",
-	"description": "Subtitle provider for Titlovi.com",
+	"name": "stremio-addon-titlovi-com",
+	"version": "1.0.0",
+	"description": "Unofficial subtitle provider for Titlovi.com",
 	"scripts": {
 		"start": "node server.js"
+	},
+	"keywords": [
+		"stremio",
+		"titlovi",
+		"titlovi.com"
+	],
+	"author": "markosoft",
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/markosoft/stremio-titlovi-com.git"
 	},
 	"dependencies": {
 		"got": "^11.8.0",
