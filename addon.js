@@ -66,7 +66,7 @@ async function getResultsFromAllPages(params) {
 function formatSubtitlesEntry(json) {
 	return json.SubtitleResults
 				.filter(s => s.Lang.toLowerCase() in langMapping)
-				.map(s => { return { link: s.Link, lang: langMapping[s.Lang.toLowerCase()], downloadCount: s.DownloadCount, rating: s.Rating, releases: s.Release.split(" / ") };});
+				.map(s => { return { link: s.Link, lang: langMapping[s.Lang.toLowerCase()], downloadCount: s.DownloadCount, rating: s.Rating, releases: s.Release.split(" / "), id: s.Id };});
 }
 
 function sortSubs(allSubs, fileNameLower, sortFirst = "downloadCount", sortSecond = "rating") {
@@ -112,13 +112,9 @@ builder.defineSubtitlesHandler(async ({type, id, extra}) => {
 	}
 
 	var allSubs = await getResultsFromAllPages(params);
-	allSubs = sortSubs(allSubs, fileNameLower).map(s => { return { url: `${downloaderProxyUrl}:${downloaderProxyPort}/?url=${encodeURIComponent(s.link)}`, lang: s.lang} });
+	allSubs = sortSubs(allSubs, fileNameLower).map(s => { return { url: `${downloaderProxyUrl}:${downloaderProxyPort}/?url=${encodeURIComponent(s.link)}`, lang: s.lang, id: "[Titlovi] " + s.id} });
 
-
-	var response = { subtitles: allSubs };
-	console.log(response);
-
-	return response;
+	return { subtitles: allSubs };
 })
 
 module.exports = builder.getInterface()
