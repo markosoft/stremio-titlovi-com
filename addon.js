@@ -34,12 +34,13 @@ var langMapping = {
 const manifest = {
 	"id": "com.stremio.titlovi",
 	"version": "1.0.0",
+	'contactEmail': 'vukovmarko@gmail.com',
 	"catalogs": [],
 	"resources": [
 		"subtitles"
 	],
 	"types": ["series","movie"],
-	"name": "Titlovi.com",
+	"name": "Titlovi.com Subtitles",
 	"description": "Unofficial subtitle provider for Titlovi.com"
 }
 const builder = new addonBuilder(manifest)
