@@ -15,7 +15,6 @@ async function subtitleHandler({type, id, extra}) {
 	}
 
 	var allSubs = await titloviComGetAllSubs(type, imdbId, season, episode, fileNameLower);
-
 	return { subtitles: allSubs };
 }
 

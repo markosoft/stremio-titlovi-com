@@ -1,3 +1,5 @@
+const localSecret = require('./.secret/secret.json')
+
 var env = process.argv[2] || 'heroku';
 var config = {};
 
@@ -11,6 +13,8 @@ switch (env) {
     case 'local':
 		config.port = 8095
         config.local = "http://127.0.0.1:" + config.port
+        config.username = localSecret.username
+        config.password = localSecret.password
         break;
 }
 
