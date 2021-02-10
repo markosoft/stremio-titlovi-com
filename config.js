@@ -4,7 +4,7 @@ var config = {};
 switch (env) {
     case 'heroku':
 		config.port = process.env.PORT
-        config.local = "https://stremio-titlovi-com.herokuapp.com/"
+        config.local = "https://stremio-titlovi-com.herokuapp.com"
         config.username = process.env.username
         config.password = process.env.password
         break;
