@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"description": "Unofficial subtitle provider for Titlovi.com",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node app/index.js",
+		"start:dev": "node app/index.js local"
 	},
 	"keywords": [
 		"stremio",
@@ -12,6 +13,13 @@
 	],
 	"author": "markosoft",
 	"license": "GPL-3.0",
+	"main": "app/index.js",
+	"app": {
+		"stremio-addon-titlovi-com": "index.js"
+	},
+	"directories": {
+		"lib": "lib"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/markosoft/stremio-titlovi-com.git"
