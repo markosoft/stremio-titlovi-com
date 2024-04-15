@@ -1,6 +1,6 @@
 {
 	"name": "stremio-addon-titlovi-com",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Unofficial subtitle provider for Titlovi.com",
 	"scripts": {
 		"start": "node app/index.js",

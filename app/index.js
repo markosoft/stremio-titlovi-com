@@ -12,7 +12,7 @@ const { publishToCentral, addonBuilder, getRouter} = require("stremio-addon-sdk"
 // Docs: https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/api/responses/manifest.md
 const manifest = {
 	"id": "com.stremio.titlovi",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"catalogs": [],
 	"resources": ["subtitles"],
     "types": ["series","movie"],
