@@ -3,10 +3,10 @@ var config = {};
 
 switch (env) {
     case 'azure':
-		config.port = process.env.PORT
-        config.local = "https://stremio-titlovi-com.azurewebsites.net"
-        config.username = process.env.username
-        config.password = process.env.password
+		config.port = process.env.PORT;
+        config.local = "https://stremio-titlovi-com.azurewebsites.net";
+        config.username = process.env.stremio_username;
+        config.password = process.env.stremio_password;
         break;
     case 'local':
         var localSecret = require('./.secret/secret.json');
