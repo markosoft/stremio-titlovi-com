@@ -26,8 +26,8 @@
 	},
 	"dependencies": {
 		"got": "^11.8.0",
-		"jszip": "^3.5.0",
-		"node-unrar-js": "^0.8.1",
-		"stremio-addon-sdk": "1.1.x"
+		"jszip": "^3.10.1",
+		"node-unrar-js": "^2.0.2",
+		"stremio-addon-sdk": "^1.6.10"
 	}
 }
